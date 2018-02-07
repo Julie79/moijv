@@ -5,19 +5,19 @@
 
 {% block body %}
     <h1>Bienvenue sur la liste des utilisateurs</h1>
-    {# Ceci est un commentaire twig #}
-    {# TODO generate user list #}
-
+    
+    {# Afficher la liste des utilisateurs #}
     <ul>
         {# <?php foreach($users as $user): ?> #}
         {% for user in users %}
             <li>
                 {# <?= htmlspecialchars($user->getFirstname()); ?> #}
                 {{ user.firstname }} {{ user.lastname }}
+                
                 <a href="{{ path('user_details', {id : user.id}) }}">Détails</a>
-                {# user_details est bien le nom du chemein que nous avons donné à la route dans UserController #}
+                {# user_details est bien le nom du chemin que nous avons donné à la route dans UserController #}
             </li>
-            {# <?php endforeach; ?> #}
+        {# <?php endforeach; ?> #}
         {% endfor %}
     </ul>
         

@@ -2,24 +2,23 @@
 
 namespace App\Repository;
 
-use App\Entity\User;
+use App\Entity\Tag;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Symfony\Bridge\Doctrine\RegistryInterface;
 
-class UserRepository extends ServiceEntityRepository
+class TagRepository extends ServiceEntityRepository
 {
     public function __construct(RegistryInterface $registry)
     {
-        // lien avec l'entité User
-        parent::__construct($registry, User::class);
+        parent::__construct($registry, Tag::class);
     }
 
     /*
     public function findBySomething($value)
     {
-        return $this->createQueryBuilder('u')
-            ->where('u.something = :value')->setParameter('value', $value)
-            ->orderBy('u.id', 'ASC')
+        return $this->createQueryBuilder('t')
+            ->where('t.something = :value')->setParameter('value', $value)
+            ->orderBy('t.id', 'ASC')
             ->setMaxResults(10)
             ->getQuery()
             ->getResult()

@@ -6,6 +6,7 @@ use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
+// La ligne ci-dessous permet de lier User à UserRepository, et donc à UserController!
 /**
  * @ORM\Entity(repositoryClass="App\Repository\UserRepository")
  */

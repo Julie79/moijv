@@ -10,8 +10,7 @@
             <li>{{ product.name }}</li>
         {% endfor %}
     </ul>
-    <a href="{{ path('list_user') }}">Retour à la liste des utilisateurs</a>
-    {# list_user est bien le nom du chemein que nous avons donné à la route dans UserController #}
+    <a href="{{ path('user_list') }}">Retour à la liste des utilisateurs</a>
+    {# user_list est bien le nom du chemein que nous avons donné à la route dans UserController #}
     
-    {# TODO afficher les infos et produits de l'utilisateur #}
 {% endblock %}

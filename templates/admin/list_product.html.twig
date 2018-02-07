@@ -1,0 +1,26 @@
+{# le contenu de ce fichier va s'insérer dans base.html.twig #}
+{% extends "base.html.twig" %}
+
+{% block title %}Liste des produits{% endblock %}
+
+{% block body %}
+    <h1>Bienvenue sur la liste des produits</h1>
+
+    {# Afficher la liste des produits #}
+    <ul>
+        {# <?php foreach($products as $product): ?> #}
+        {% for product in products %}
+            <li>
+                {# <?= htmlspecialchars($product->getName()); ?> #}
+                {{ product.name }}
+                {% for tag in product.tags%}
+                    <a href="{{path('list_product_by_tag', {name : tag.name})}}">
+                        #{{tag.name}}
+                    </a>
+                {% endfor %}
+        </li>
+    {# <?php endforeach; ?> #}
+    {% endfor %}
+    
+</ul>
+{% endblock %}
