@@ -1,0 +1,29 @@
+{# le contenu de ce fichier va s'insérer dans base.html.twig #}
+{% extends "base.html.twig" %}
+
+{% block title %}Liste des utilisateurs{% endblock %}
+
+{% block body %}
+    <h1>Bienvenue sur la liste des utilisateurs</h1>
+    {# Ceci est un commentaire twig #}
+    {# TODO generate user list #}
+
+    <ul>
+        {# <?php foreach($users as $user): ?> #}
+        {% for user in users %}
+            <li>
+                {# <?= htmlspecialchars($user->getFirstname()); ?> #}
+                {{ user.firstname }} {{ user.lastname }}
+                <a href="{{ path('user_details', {id : user.id}) }}">Détails</a>
+                {# user_details est bien le nom du chemein que nous avons donné à la route dans UserController #}
+            </li>
+            {# <?php endforeach; ?> #}
+        {% endfor %}
+    </ul>
+        
+{% endblock %}
+
+
+
+
+

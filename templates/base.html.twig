@@ -2,7 +2,8 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
+        {# Dashboard sera affiché par défaut si aucun block title n'est renseigné dans les templates enfants #}
+        <title>MoiJV - {% block title %}Dashboard{% endblock %}</title>
         {% block stylesheets %}{% endblock %}
     </head>
     <body>
