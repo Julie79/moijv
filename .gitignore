@@ -1,8 +1,8 @@
-
 ###> symfony/framework-bundle ###
 .env
 /public/bundles/
 /var/
 /vendor/
 ###< symfony/framework-bundle ###
-/nbproject/private/
+/nbproject/
+/public/uploads/
