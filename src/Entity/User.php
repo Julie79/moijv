@@ -80,7 +80,7 @@ class User implements UserInterface, \Serializable
    
     public function getRoles()
    {
-       return explode(',', $this->roles);
+       return explode('|', $this->roles);
    }
    
     public function eraseCredentials()

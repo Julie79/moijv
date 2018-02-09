@@ -17,7 +17,7 @@ class LoanController extends Controller {
      * @Route("/add/product", name="add_product")
      */
     public function addProduct(ObjectManager $manager, Request $request) {
-        $this->denyAccessUnlessGranted('ROLE_USER', null, 'Vous devez être connecté pour accéder à cette page');
+        //$this->denyAccessUnlessGranted('ROLE_USER', null, 'Vous devez être connecté pour accéder à cette page');
 
         $product = new Product();
 
