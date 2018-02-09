@@ -12,7 +12,7 @@
     </ul>
     <ul>
         {% for tag in product.tags %}
-            <li>{{ tag.name }}</li>
+            <li>#{{ tag.name }}</li>
         {% endfor %}
     </ul>
     <a href="{{ path('product_list') }}">Retour à la liste des produits</a>

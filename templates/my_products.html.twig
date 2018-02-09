@@ -1,0 +1,15 @@
+{# on utilise {%%} pour les instructions et {{ }} pour faire un echo PHP #}
+
+{% extends "base.html.twig" %}
+
+{% block title %}Mes produits{% endblock %}
+{% block body %}
+    <h1>Mes produits</h1>
+    
+    <ul>
+    {# On peut accéder à l'utilisateur connecté grace à la variable app #}
+    {% for product in app.user.products %}
+        <li>{{ product.name }}</li>
+    {% endfor %}
+    </ul>
+{% endblock %}

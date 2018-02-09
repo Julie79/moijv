@@ -15,9 +15,11 @@
                 {{ product.name }}
                 {% for tag in product.tags%}
                     <a href="{{path('list_product_by_tag', {name : tag.name})}}">
-                        #{{tag.name}}
+                        #{{tag.name}}   
                     </a>
                 {% endfor %}
+                <a href="{{ path('product_details', {id : product.id}) }}">Détails</a>
+                {# product_details est bien le nom du chemin que nous avons donné à la route dans ProductController #}
         </li>
     {# <?php endforeach; ?> #}
     {% endfor %}
